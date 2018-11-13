@@ -1,0 +1,12 @@
+<h4 id="if-you-are-on-windows-you-must-install-git-bash-or-else-the-ssh-keygen-command-wont-work.">If you are on windows you must install Git Bash or else the ssh-keygen command won't work.</h4>
+<h4 id="httpsgit-scm.comdownloadwin">https://git-scm.com/download/win</h4>
+<h2 id="ssh-keys">SSH Keys</h2>
+<p>An SSH key allows you to establish a secure connection between your computer and GitLab. To generate a new SSH key, use the following command:</p>
+<pre><code>ssh-keygen -t rsa -C &quot;$your_email&quot;</code></pre>
+<p>Press enter for default settings for all remaining prompts. Once generated, you need to copy &amp; paste the key to the 'SSH Keys' section under the Settings section from the top right corner of GitLab. To copy your public key to the clipboard, use the code below.</p>
+<h4 id="windows">Windows:</h4>
+<pre><code>clip &lt; ~/.ssh/id_rsa.pub</code></pre>
+<h4 id="mac">Mac:</h4>
+<pre><code>pbcopy &lt; ~/.ssh/id_rsa.pub</code></pre>
+<h4 id="gnulinux-requires-xclip">GNU/Linux (requires xclip):</h4>
+<pre><code>xclip -sel clip &lt; ~/.ssh/id_rsa.pub</code></pre>
